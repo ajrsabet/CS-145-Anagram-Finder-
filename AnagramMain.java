@@ -14,9 +14,10 @@ search for anagrams that match the user's phrases.
 import java.io.*;
 import java.util.*;
 
+
 public class AnagramMain {
     // dictionary file to use for input (change to dict2, dict3)
-    private static final String DICTIONARY_FILE = "dict1.txt";
+    private static final String DICTIONARY_FILE = "dict3.txt";
     
     // set to true to test runtime and # of letter inventories created
     private static final boolean TIMING = true;
@@ -35,7 +36,7 @@ public class AnagramMain {
         dictionary = Collections.unmodifiableSet(dictionary);   // read-only
 
         // create Anagrams object for, well, solving anagrams
-        Anagrams solver = new Anagrams(dictionary);
+        AnagramsManager solver = new AnagramsManager(dictionary);
 
         // get first phrase to solve
         Scanner console = new Scanner(System.in);
